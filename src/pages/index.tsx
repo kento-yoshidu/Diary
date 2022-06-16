@@ -12,9 +12,10 @@ import * as Styles from "../styles/style.module.scss"
 const Sample2 = () => (
   <>
     {/*
-    <Seo
-      title="Sample2"
-    />
+      <Seo
+        title="Sample2"
+      />
+    */}
 
     <ReactHelmet>
       <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
@@ -22,7 +23,6 @@ const Sample2 = () => (
     </ReactHelmet>
 
     <GlobalNav />
-*/}
 
     <main className={Styles.main} role="main">
 
