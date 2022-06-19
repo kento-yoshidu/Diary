@@ -1,6 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 import Slider from "react-slick"
 
