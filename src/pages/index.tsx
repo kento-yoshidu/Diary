@@ -7,6 +7,8 @@ import ReactSlick from "../components/ReactSlick"
 import GlobalNav from "../components/GlobalNav"
 import { Tab } from "@headlessui/react"
 
+import Member from "../components/Member"
+
 import * as Styles from "../styles/style.module.scss"
 
 const Sample2 = () => (
@@ -244,90 +246,82 @@ const Sample2 = () => (
       <section className={`${Styles.section} ${Styles.memberSection}`} id="member">
         <h2 className={`${Styles.title} ${Styles.sectionTitle} ${Styles.memberSectionTitle}`}>Member</h2>
 
-        <div className={Styles.memberWrapper}>
-          <a href="" className={Styles.member}>
-            <StaticImage
-              src="src/images/member/member1.jpg"
-              alt="oge"
-              layout="fullWidth"
-            />
-            <div className={Styles.mask}>
-              <p>nanase</p>
-            </div>
-          </a>
 
-          <a href="" className={Styles.member}>
+        <div className={Styles.memberWrapper}>
+          <Member />
+
+          <a>
             <StaticImage
               src="src/images/member/member2.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>nanami</p>
             </div>
           </a>
-          <a href="" className={Styles.member}>
+          <a>
             <StaticImage
               src="src/images/member/member3.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>mai</p>
             </div>
           </a>
 
-          <a href="" className={Styles.member}>
+          <a>
             <StaticImage
               src="src/images/member/member4.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>sayuri</p>
             </div>
           </a>
 
-          <a href="" className={Styles.member}>
+          <a>
             <StaticImage
               src="src/images/member/member5.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>rina</p>
             </div>
           </a>
 
-          <a href="" className={Styles.member}>
+          <a>
             <StaticImage
               src="src/images/member/member6.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>mai</p>
             </div>
           </a>
 
-          <a href="" className={Styles.member}>
+          <a>
             <StaticImage
               src="src/images/member/member7.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>erika</p>
             </div>
           </a>
 
-          <a href="" className={Styles.member}>
+          <a>
             <StaticImage
               src="src/images/member/member8.jpg"
               alt="oge"
               layout="fullWidth"
             />
-            <div className={Styles.mask}>
+            <div>
               <p>manatsu</p>
             </div>
           </a>
