@@ -1,10 +1,9 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-// import styled from 'styled-components'
 
 import Slider from "react-slick"
 
-import * as Styles from "./slick.module.scss"
+import * as Styles from "../styles/slick.module.scss"
 
 const NextArrow = ({ className, onClick }) => (
   <div
@@ -41,38 +40,36 @@ const SlickConfig = {
 }
 
 const ReactSlick = () => (
-  <>
-    <div className={Styles.wrapper}>
-      <Slider {...SlickConfig}>
-        <div className={Styles.slide}>
-          <StaticImage
-            src="../src/images/live_photograph/live1.jpg"
-            alt="hoge"
-            placeholder="blurred"
-            layout="fullWidth"
-          />
-        </div>
+  <div className={Styles.wrapper}>
+    <Slider {...SlickConfig}>
+      <div className={Styles.slide}>
+        <StaticImage
+          src="../images/live_photograph/live1.jpg"
+          alt="hoge"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+      </div>
 
-        <div className={Styles.slide}>
-          <StaticImage
-            src="../src/images/live_photograph/live2.jpg"
-            alt="hoge"
-            placeholder="blurred"
-            layout="fullWidth"
-          />
-        </div>
+      <div className={Styles.slide}>
+        <StaticImage
+          src="../images/live_photograph/live2.jpg"
+          alt="hoge"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+      </div>
 
-        <div className={Styles.slide}>
-          <StaticImage
-            src="../src/images/live_photograph/live3.jpg"
-            alt="hoge"
-            placeholder="blurred"
-            layout="fullWidth"
-          />
-        </div>
-      </Slider>
-    </div>
-  </>
+      <div className={Styles.slide}>
+        <StaticImage
+          src="../images/live_photograph/live3.jpg"
+          alt="hoge"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+      </div>
+    </Slider>
+  </div>
 )
 
 export default ReactSlick

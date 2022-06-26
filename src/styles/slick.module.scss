@@ -2,6 +2,7 @@
   width: 55%;
   height: 65vh;
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 .slide {
@@ -11,6 +12,7 @@
 @media (max-width: 768px) {
   .wrapper {
     width: 78%;
+    height: 40vh;
   }
 
   .slide {

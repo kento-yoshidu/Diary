@@ -1,8 +1,5 @@
-$main-color: rgb(147, 41, 147);
-$main-color-hover: rgba(147, 41, 147, 0.8);
 $main-color2: rgba(147, 41, 147, 0.5);
 $main-color3: rgb(117, 11, 117);
-$sub-color: #ffd700;
 
 @keyframes fade {
   0% {
@@ -15,42 +12,12 @@ $sub-color: #ffd700;
 }
 
 .purple {
-  color: $main-color;
+  color: var(--main-color);
 }
 
 .title {
   font-family: Bitter, serif;
   font-weight: 100;
-}
-
-/**
-** button
-**/
-
-.btn-wrapper {
-  margin: 50px 0 0;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.btn {
-  position: relative;
-  color: #fff;
-  font-size: 1.7rem;
-  letter-spacing: 2px;
-  padding: 1rem 2.5rem 1.2rem;
-  background: $main-color;
-  border-radius: 1.5px;
-
-  &:hover {
-    background: $main-color-hover;
-  }
-}
-
-@media (max-width: 768px) {
-  .btn-wrapper {
-    margin: 15px 0 0;
-  }
 }
 
 .main {
@@ -81,7 +48,7 @@ $sub-color: #ffd700;
   text-align: center;
 
   &::first-letter {
-    color: $main-color;
+    color: var(--main-color);
     font-size: clamp(6rem, 8vw, 10rem);
   }
 }
@@ -111,10 +78,6 @@ $sub-color: #ffd700;
   text-align: left;
 }
 
-/**
-** intro-section
-**/
-
 .intro-section {
   margin-top: 140px;
   padding: 50px 0 100px;
@@ -140,6 +103,7 @@ $sub-color: #ffd700;
 
 @media (max-width: 768px) {
   .intro-section {
+    margin-top: 30px;
     padding: 30px 0 20px;
 
     .section-title {
@@ -182,13 +146,13 @@ $sub-color: #ffd700;
     height: auto;
     position: relative;
     box-sizing: unset;
-    box-shadow: 0 0 2px 2px rgba($main-color, 0.4);
+    box-shadow: 0 0 2px 2px var(--main-color);
   }
 
   button {
     &[aria-selected="true"] {
       .thum {
-        border: 5px solid rgba($main-color, 0.5);
+        border: 5px solid rgba(var(--main-color), 0.5);
         box-shadow: none;
       }
     }
@@ -231,7 +195,7 @@ $sub-color: #ffd700;
   width: 45%;
   height: auto;
   margin-bottom: 50px;
-  box-shadow: 0 0 6px 6px rgba($main-color, 0.1);
+  box-shadow: 0 0 6px 6px rgba(var(--main-color), 0.1);
   object-fit: contain;
 }
 
@@ -245,7 +209,7 @@ $sub-color: #ffd700;
 
     .info {
       color: #aaa;
-      font-size: 1.8rem;
+      font-size: clamp(1.5rem, 2vw, 1.8rem);
       font-weight: 400;
     }
   }
@@ -318,10 +282,6 @@ $sub-color: #ffd700;
     li {
       margin-bottom: 1rem;
       font-size: 1.4rem;
-
-      .info {
-        font-size: 1.5rem;
-      }
     }
   }
 }
@@ -346,7 +306,7 @@ $sub-color: #ffd700;
   flex-direction: column;
   width: unquote("min(1166px, 90%)");
   margin: 0 auto;
-  background: $main-color;
+  background: var(--main-color);
   border: 1px solid #222;
   color: #fff;
   transition: 0.3s;
@@ -558,7 +518,7 @@ $sub-color: #ffd700;
 }
 
 .nogi-base {
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, $main-color 50.3%) no-repeat bottom right/100% 100%;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, var(--main-color) 50.3%) no-repeat bottom right/100% 100%;
   position: relative;
   font-family: Bitter, serif;
 }
@@ -568,7 +528,7 @@ $sub-color: #ffd700;
   right: 0;
   bottom: -30px;
   content: "potsunen";
-  color: $main-color;
+  color: var(--main-color);
   font-size: 2rem;
   font-style: italic;
 }
