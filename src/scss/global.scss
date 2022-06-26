@@ -1,5 +1,10 @@
 @import "./reset";
 
+:root {
+  --main-color: rgb(147, 41, 147);
+  --sub-color: #ffd700;
+}
+
 html {
   font-size: 62.5%;
 }
