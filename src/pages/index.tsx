@@ -154,7 +154,7 @@ const Sample2 = () => (
           rel="noreferrer"
         >
           <StaticImage
-            src="src/images/news/news1.jpg"
+            src="../images/news/news1.jpg"
             alt="hoge"
           />
           <div className={Styles.contentsInner}>
@@ -169,7 +169,7 @@ const Sample2 = () => (
           </div>
         </a>
 
-        <div className={`${Styles.contentsContainer} ${Styles.container2}`}>
+        <div className={Styles.contentsContainer}>
           <a
             className={Styles.contents}
             href="https://blog.toriwatari.work/series/HelloWeb/page/1/"
@@ -177,7 +177,7 @@ const Sample2 = () => (
             rel="noreferrer"
           >
             <StaticImage
-              src="src/images/news/news2.jpg"
+              src="../images/news/news2.jpg"
               alt="Hoge"
               className={Styles.imgWrapper}
             />
@@ -196,7 +196,7 @@ const Sample2 = () => (
             target="_blank"
           >
             <StaticImage
-              src="src/images/news/news3.jpg"
+              src="../images/news/news3.jpg"
               alt="#"
               className={Styles.imgWrapper}
             />
@@ -210,10 +210,10 @@ const Sample2 = () => (
           </a>
         </div>
 
-        <div className={`${Styles.contentsContainer} ${Styles.container2}`}>
+        <div className={`${Styles.contentsContainer} ${Styles.container_2}`}>
           <a className={Styles.contents} href="#">
             <StaticImage
-              src="src/images/news/news4.jpg"
+              src="../images/news/news4.jpg"
               alt="#"
               className={Styles.imgWrapper}
             />
@@ -228,7 +228,7 @@ const Sample2 = () => (
 
           <a className={Styles.contents} href="#">
             <StaticImage
-              src="src/images/news/news5.jpg"
+              src="../images/news/news5.jpg"
               alt="#"
               className={Styles.imgWrapper}
             />
@@ -252,7 +252,7 @@ const Sample2 = () => (
 
           <a>
             <StaticImage
-              src="src/images/member/member2.jpg"
+              src="../images/member/member2.jpg"
               alt="oge"
               layout="fullWidth"
             />
@@ -262,7 +262,7 @@ const Sample2 = () => (
           </a>
           <a>
             <StaticImage
-              src="src/images/member/member3.jpg"
+              src="../images/member/member3.jpg"
               alt="oge"
               layout="fullWidth"
             />
@@ -273,7 +273,7 @@ const Sample2 = () => (
 
           <a>
             <StaticImage
-              src="src/images/member/member4.jpg"
+              src="../images/member/member4.jpg"
               alt="oge"
               layout="fullWidth"
             />
@@ -284,7 +284,7 @@ const Sample2 = () => (
 
           <a>
             <StaticImage
-              src="src/images/member/member5.jpg"
+              src="../images/member/member5.jpg"
               alt="oge"
               layout="fullWidth"
             />
@@ -295,7 +295,7 @@ const Sample2 = () => (
 
           <a>
             <StaticImage
-              src="src/images/member/member6.jpg"
+              src="../images/member/member6.jpg"
               alt="oge"
               layout="fullWidth"
             />
@@ -306,7 +306,7 @@ const Sample2 = () => (
 
           <a>
             <StaticImage
-              src="src/images/member/member7.jpg"
+              src="../images/member/member7.jpg"
               alt="oge"
               layout="fullWidth"
             />
@@ -317,7 +317,7 @@ const Sample2 = () => (
 
           <a>
             <StaticImage
-              src="src/images/member/member8.jpg"
+              src="../images/member/member8.jpg"
               alt="oge"
               layout="fullWidth"
             />
