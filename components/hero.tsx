@@ -1,8 +1,16 @@
-export default function Hero() {
+type Props = {
+  title: string
+  subtitle: string
+  imageOn?: boolean
+}
+
+export default function Hero({ title, subtitle, imageOn = false }: Props) {
   return (
     <>
-      <h1>CUBE</h1>
-      <p>アウトプットしていくサイト</p>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+
+      {imageOn && <figure> 画像 </figure>}
     </>
   )
 }

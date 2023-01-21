@@ -1,5 +1,11 @@
+import Logo from "./logo"
+import Nav from "./nav"
+
 export default function Header() {
   return (
-    <header>header</header>
+    <header>
+      <Logo />
+      <Nav />
+    </header>
   )
 }
