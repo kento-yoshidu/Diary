@@ -12,7 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero />
+      <Hero
+        title="HOME"
+        subtitle="アウトプットしていくサイト"
+        imageOn
+      />
     </>
   )
 }
