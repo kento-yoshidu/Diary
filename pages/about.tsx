@@ -3,6 +3,9 @@ import Container from "@/components/container"
 import PostBody from "@/components/post-body"
 import Contact from "@/components/contact"
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "@/components/two-column"
+import Image from "next/image"
+import eyecatch from "images/about.jpg"
+import { symlinkSync } from "fs"
 
 export default function About() {
   return (
@@ -11,6 +14,17 @@ export default function About() {
         title="About"
         subtitle="About development activities"
       />
+
+      <figure>
+        <Image
+          src={eyecatch}
+          alt=""
+          layout="responsive"
+          sizes="(min-width: 1152px) 1152px, 100vw"
+          priority
+          placeholder="blur"
+        />
+      </figure>
 
       <TwoColumn>
         <TwoColumnMain>
