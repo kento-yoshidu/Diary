@@ -11,7 +11,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core"
 import { CSSProperties } from "react"
 
 type Props = {
-  iconSize: string
+  iconSize?: string
 }
 
 export default function Social({ iconSize = "initial" }: Props) {

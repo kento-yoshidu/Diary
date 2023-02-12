@@ -3,13 +3,22 @@ import Container from "@/components/container"
 import PostBody from "@/components/post-body"
 import Contact from "@/components/contact"
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "@/components/two-column"
+import Meta from "@/components/meta"
+
 import Image from "next/image"
 import eyecatch from "images/about.jpg"
-import { symlinkSync } from "fs"
 
 export default function About() {
   return (
     <Container>
+      <Meta
+        pageTitle="アバウト"
+        pageDesc="About"
+        pageImg={eyecatch.src}
+        pageImgW={eyecatch.width}
+        pageImgH={eyecatch.height}
+      />
+
       <Hero
         title="About"
         subtitle="About development activities"
