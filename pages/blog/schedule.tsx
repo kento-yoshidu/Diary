@@ -1,15 +1,24 @@
 import { getPostBySlug } from "@/lib/api"
 import Container from "@/components/container"
 import PostHeader from "@/components/postHeader"
-import { subtitle } from "@/styles/hero.module.css"
+import Image from "next/image"
+import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants"
+import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "@/components/two-column"
+import PostBody from "@/components/post-body"
+import ConvertBody from "@/components/convert-body"
 
 type Props = {
   title: string,
   publish: string,
   content: string,
-  eyecatch: string,
+  eyecatch: {
+    url: string,
+    width: number,
+    height: number
+  }
   categories: string[]
 }
+
 export default function Schedule({
   title,
   publish,
@@ -17,6 +26,8 @@ export default function Schedule({
   eyecatch,
   categories
 }: Props) {
+  console.log(eyecatch)
+
   return (
     <Container>
       <article>
@@ -25,6 +36,30 @@ export default function Schedule({
           subtitle="Blog Article"
           publish={publish}
         />
+
+        <figure>
+          <Image
+            src={eyecatch.url}
+            alt=""
+            layout="responsive"
+            width={eyecatch.width}
+            height={eyecatch.height}
+            sizes="(min-width: 1152px) 1152px, 100vw"
+            priority
+          />
+        </figure>
+
+        <TwoColumn>
+          <TwoColumnMain>
+            <PostBody>
+              <ConvertBody contentHTML={content} />
+            </PostBody>
+          </TwoColumnMain>
+
+          <TwoColumnSidebar>
+
+          </TwoColumnSidebar>
+        </TwoColumn>
       </article>
     </Container>
   )
