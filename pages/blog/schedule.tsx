@@ -1,6 +1,6 @@
 import { getPostBySlug } from "@/lib/api"
 import Container from "@/components/container"
-import PostHeader from "@/components/postHeaDer"
+import PostHeader from "@/components/postHeader"
 import { subtitle } from "@/styles/hero.module.css"
 
 type Props = {
