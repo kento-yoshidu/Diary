@@ -6,6 +6,7 @@ import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants"
 import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "@/components/two-column"
 import PostBody from "@/components/post-body"
 import ConvertBody from "@/components/convert-body"
+import PostCategories from "@/components/post-categories"
 
 type Props = {
   title: string,
@@ -57,7 +58,7 @@ export default function Schedule({
           </TwoColumnMain>
 
           <TwoColumnSidebar>
-
+            <PostCategories categories={categories} />
           </TwoColumnSidebar>
         </TwoColumn>
       </article>
