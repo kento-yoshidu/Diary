@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { getPlaiceholder } from "plaiceholder"
 
-import { getPostBySlug } from "@/lib/api"
+import { getAllSlug, getPostBySlug } from "@/lib/api"
 import { extractText } from "@/lib/extract"
 import { eyecatchLocal } from "@/lib/constants"
 
@@ -82,8 +82,17 @@ export default function Schedule({
   )
 }
 
-export async function getStaticProps() {
-  const slug = "schedule"
+export async function getStaticPaths() {
+  const allSlugs = await getAllSlug()
+
+  return {
+    paths: allSlugs.map(({ slug }) => `/blog/${slug}/`),
+    fallback: false
+  } 
+}
+
+export async function getStaticProps(context: any) {
+  const slug = context.params.slug
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
   const eyecatch = post.eyecatch ?? eyecatchLocal
