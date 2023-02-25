@@ -13,6 +13,7 @@ import PostBody from "@/components/post-body"
 import ConvertBody from "@/components/convert-body"
 import PostCategories from "@/components/post-categories"
 import Meta from "@/components/meta"
+import Pagination from "@/components/pagination"
 
 type Props = {
   title: string,
@@ -89,8 +90,12 @@ export default function Schedule({
           </TwoColumnSidebar>
         </TwoColumn>
 
-        <div>{prevPost.title} {prevPost.slug}</div>
-        <div>{nextPost.title} {nextPost.slug}</div>
+        <Pagination
+          prevText={prevPost.title}
+          prevUrl={prevPost.slug}
+          nextText={nextPost.title}
+          nextUrl={nextPost.slug}
+        />
       </article>
     </Container>
   )
