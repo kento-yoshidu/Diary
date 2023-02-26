@@ -1,5 +1,9 @@
+type Slug = {
+  title: string,
+  slug: string
+}
 
-export function prevNextPost (allSlugs: string[], currentSlug: string) {
+export function prevNextPost (allSlugs: Slug[], currentSlug: string) {
   const numberOfPosts = allSlugs.length
 
   const index = allSlugs.findIndex(
@@ -10,7 +14,7 @@ export function prevNextPost (allSlugs: string[], currentSlug: string) {
     index + 1 === numberOfPosts
       ? { title: "", slug: "" }
       : allSlugs[index + 1]
-  
+
   const nextPost =
     index === 0
       ? { title: "", slug: "" }
