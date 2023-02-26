@@ -4,6 +4,7 @@ import { getPlaiceholder } from "plaiceholder"
 import { getAllSlug, getPostBySlug } from "@/lib/api"
 import { extractText } from "@/lib/extract"
 import { eyecatchLocal } from "@/lib/constants"
+import { prevNextPost } from "@/lib/prev-next-post"
 
 import Container from "@/components/container"
 import PostHeader from "@/components/postHeader"
@@ -24,7 +25,15 @@ type Props = {
     blurDataURL: string
   }
   categories: string[],
-  description: string
+  description: string,
+  prevPost: {
+    title: string,
+    slug: string
+  },
+  nextPost: {
+    title: string,
+    slug: string
+  }
 }
 
 export default function Schedule({
@@ -33,7 +42,9 @@ export default function Schedule({
   content,
   eyecatch,
   categories,
-  description
+  description,
+  prevPost,
+  nextPost
 }: Props) {
   return (
     <Container>
@@ -77,6 +88,9 @@ export default function Schedule({
             <PostCategories categories={categories} />
           </TwoColumnSidebar>
         </TwoColumn>
+
+        <div>{prevPost.title} {prevPost.slug}</div>
+        <div>{nextPost.title} {nextPost.slug}</div>
       </article>
     </Container>
   )
@@ -100,6 +114,9 @@ export async function getStaticProps(context: any) {
   const { base64 } = await getPlaiceholder(eyecatch.url)
   eyecatch.blurDataURL = base64
 
+  const allSlugs = await getAllSlug()
+  const [prevPost, nextPost] = prevNextPost(allSlugs, slug)
+
   return {
     props: {
       title: post.title,
@@ -107,7 +124,9 @@ export async function getStaticProps(context: any) {
       content: post.content,
       eyecatch: eyecatch,
       categories: post.categories,
-      description: description
+      description: description,
+      prevPost: prevPost,
+      nextPost: nextPost
     }
   }
 }
