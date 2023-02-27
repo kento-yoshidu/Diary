@@ -1,4 +1,7 @@
 import { getAllPosts } from "@/lib/api"
+import { getPlaiceholder } from "plaiceholder"
+
+import { eyecatchLocal } from "@/lib/constants"
 
 import Hero from "@/components/hero"
 import Container from "@/components/container"
@@ -11,8 +14,6 @@ type Props = {
 }
 
 export default function Blog({ posts }: Props) {
-  console.log(posts)
-
   return (
     <Container>
       <Hero
@@ -27,6 +28,15 @@ export default function Blog({ posts }: Props) {
 
 export async function getStaticProps() {
   const posts = await getAllPosts() 
+
+  for (const post of posts) {
+    if (!post.hasOwnProperty('eyecatch')) {
+      post.eyecatch = eyecatchLocal
+    }
+
+    const { base64 } = await getPlaiceholder(post.eyecatch.url)
+    post.eyecatch.blurDataURL = base64
+  }
 
   return {
     props: {

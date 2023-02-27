@@ -4,6 +4,7 @@ export type Post = {
   eyecatch: {
     url: string,
     height: number,
-    width: number
+    width: number,
+    blurDataURL?: string
   }
 }
