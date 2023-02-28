@@ -12,12 +12,16 @@ export default function ConvertBody({ contentHTML }: { contentHTML: string }) {
 
         return (
           <Image
-            layout="responsive"
+            // layout="responsive"
             src={src}
+            alt={alt}
             width={width}
             height={height}
-            alt={alt}
             sizes="(min-width: 768px) 768px, 100vw"
+            style={{
+              width: "100%",
+              height: "auto"
+            }}
           />
         )
       }

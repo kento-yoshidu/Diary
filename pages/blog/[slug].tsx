@@ -15,6 +15,8 @@ import PostCategories from "@/components/post-categories"
 import Meta from "@/components/meta"
 import Pagination from "@/components/pagination"
 
+import type { Category } from "@/types/types"
+
 type Props = {
   title: string,
   publish: string,
@@ -25,7 +27,7 @@ type Props = {
     height: number,
     blurDataURL: string
   }
-  categories: string[],
+  categories: Category[],
   description: string,
   prevPost: {
     title: string,
@@ -66,6 +68,7 @@ export default function Schedule({
 
         <figure>
           <Image
+            key={eyecatch.url}
             src={eyecatch.url}
             alt=""
             layout="responsive"
@@ -105,9 +108,9 @@ export async function getStaticPaths() {
   const allSlugs = await getAllSlug()
 
   return {
-    paths: allSlugs.map(({ slug }) => `/blog/${slug}/`),
+    paths: allSlugs.map(({ slug }: { slug: string }) => `/blog/${slug}/`),
     fallback: false
-  } 
+  }
 }
 
 export async function getStaticProps(context: any) {
