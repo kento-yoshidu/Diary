@@ -13,9 +13,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-        # env:
-          # API_KRY: ${{ secrets.API_KEY }}
-          # SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
 
       - name: test
         run: |
@@ -26,11 +23,7 @@ jobs:
           npm ci
 
       - name: Build the project
-        run : |
-          touch .env.local
-          echo API_KRY=${{ secrets.API_KEY }} >> .env.local
-          echo SERVICE_DOMAIN=${{ secrets.SERVICE_DOMAIN }} >> .env.local
-
-          cat .env.local
-
-          npm run build
+        run : npm run build
+        env:
+          API_KRY: ${{ secrets.API_KEY }}
+          SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
