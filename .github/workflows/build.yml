@@ -14,5 +14,8 @@ jobs:
         with:
           node-version: 16.x
 
+      - env:
+        API_KRY: ${{ secrets.API_KRY }}
+        SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
       - run: npm ci
       - run: npm run build
