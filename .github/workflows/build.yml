@@ -14,5 +14,16 @@ jobs:
         with:
           node-version: 16.x
 
-      - run: npm ci
-      - run: npm run build
+      - name: test
+        run: |
+          echo ${{ secrets.API_KEY }}
+
+      - name: Install npm
+        run: |
+          npm ci
+
+      - name: Build the project
+        run : npm run build
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
