@@ -17,6 +17,6 @@ jobs:
           API_KRY: ${{ secrets.API_KEY }}
           SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
 
-        # - run: echo ${{ secrets.API_KET }}
-        - run: npm ci
-        - run: npm run build
+      # - run: echo ${{ secrets.API_KET }}
+      - run: npm ci
+      - run: npm run build
