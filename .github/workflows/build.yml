@@ -14,10 +14,6 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: test
-        run: |
-          echo ${{ secrets.API_KEY }}
-
       - name: Install npm
         run: |
           npm ci
