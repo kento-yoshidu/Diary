@@ -17,9 +17,13 @@ jobs:
           # API_KRY: ${{ secrets.API_KEY }}
           # SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
 
-      - run: |
-        touch .env.local
-        echo API_KRY=${{ secrets.API_KEY}}
-        echo SERVICE_DOMAIN=${{ secrets.SERVICE_DOMAIN}}
-      - run: npm ci
-      - run: npm run build
+      - name: Install npm
+        run: |
+          npm ci
+
+      - name: Build the project
+        run : |
+          touch .env.local
+          echo API_KRY=${{ secrets.API_KEY}} >> .env.local
+          echo SERVICE_DOMAIN=${{ secrets.SERVICE_DOMAIN}} >> .env.local
+          npm run build
