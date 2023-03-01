@@ -25,5 +25,5 @@ jobs:
       - name: Build the project
         run : npm run build
         env:
-          API_KRY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
           SERVICE_DOMAIN: ${{ secrets.SERVICE_DOMAIN }}
