@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ReactNode } from "react"
@@ -9,10 +10,16 @@ type Props = {
 }
 
 export default function Accordion({ heading, children }: Props) {
+  const [textIsOpen, setTextIsOpen] = useState(false)
+
+  const toggleText = () => {
+    setTextIsOpen((prev) => !prev)
+  }
+
   return (
-    <div className={styles.open}>
+    <div className={textIsOpen ? styles.open : styles.close} data-testid="div">
       <h3 className={styles.heading}>
-        <button>
+        <button onClick={toggleText}>
           {heading}
 
           <FontAwesomeIcon icon={faCircleArrowDown} className={styles.icon} />
