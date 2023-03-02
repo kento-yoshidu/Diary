@@ -1,5 +1,16 @@
-.open {
+.open,
+.close {
   border: solid 1px var(--gray-25);
+}
+
+.text {
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.5s;
+}
+
+.open .text {
+  height: auto;
 }
 
 .heading {
