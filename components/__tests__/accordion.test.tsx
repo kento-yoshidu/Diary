@@ -11,6 +11,6 @@ describe("Accordion test", () => {
 
   it("Close class is given to the div element", () => {
     render(<Accordion heading="dummy header">dummy text</Accordion>)
-    expect(screen.getByTestId("div")).toHaveClass("closesese")
+    expect(screen.getByTestId("div")).toHaveClass("close")
   })
 })
