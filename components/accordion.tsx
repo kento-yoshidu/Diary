@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, CSSProperties } from "react"
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ReactNode } from "react"
@@ -16,6 +16,8 @@ export default function Accordion({ heading, children }: Props) {
     setTextIsOpen((prev) => !prev)
   }
 
+  const refText = useRef<HTMLDivElement>(null)
+
   return (
     <div className={textIsOpen ? styles.open : styles.close} data-testid="div">
       <h3 className={styles.heading}>
@@ -26,7 +28,13 @@ export default function Accordion({ heading, children }: Props) {
         </button>
       </h3>
 
-      <div className={styles.text}>
+      <div
+        className={styles.text}
+        ref={refText}
+        style={{
+          "--text-height": `${refText?.current?.scrollHeight}px`
+        } as CSSProperties}
+      >
         <div className={styles.textInner}>{children}</div>
       </div>
     </div>
