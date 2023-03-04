@@ -8,5 +8,5 @@ export default function ConvertDate({ dateISO }: { dateISO: string }) {
         locale: ja
       })}
     </time>
-  ) 
+  )
 }
