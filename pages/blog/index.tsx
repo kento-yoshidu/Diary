@@ -27,7 +27,7 @@ export default function Blog({ posts }: Props) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPosts() 
+  const posts = await getAllPosts()
 
   for (const post of posts) {
     if (!post.hasOwnProperty('eyecatch')) {
