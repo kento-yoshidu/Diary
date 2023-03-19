@@ -8,7 +8,7 @@
 }
 
 .title {
-  font-size: var(--display);
+  font-size: calc(var(--display) * 0.8);
   font-weight: 900;
   letter-spacing: 0.15em;
 }
@@ -25,5 +25,5 @@
 @media (768px < width) {
   .image {
     width: 50%;
-  } 
+  }
 }
