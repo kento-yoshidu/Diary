@@ -18,20 +18,6 @@ export default function Social({ iconSize = "initial" }: Props) {
   return (
     <ul className={styles.list} style={{ "--icon-size": iconSize } as CSSProperties}>
       <li>
-        <a href="#">
-          <FontAwesomeIcon icon={faTwitter} />
-          <span className="sr-only">Twitter</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <FontAwesomeIcon icon={faFacebookF} />
-          <span className="sr-only">Facebook</span>
-        </a>
-      </li>
-
-      <li>
         <a href="https://github.com/kento-yoshidu">
           <FontAwesomeIcon icon={faGithub} />
           <span className="sr-only">Github</span>

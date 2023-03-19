@@ -22,8 +22,12 @@ export default function Hero({ title, subtitle, imageOn = false }: Props) {
             <Image
               src={top}
               alt=""
-              layout="responsive"
-              sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
+              // layout="responsive"
+              // sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
+              fill
+              style={{
+                objectFit: "cover"
+              }}
               priority
               placeholder="blur"
             />
