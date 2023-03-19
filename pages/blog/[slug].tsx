@@ -18,23 +18,23 @@ import Pagination from "@/components/pagination"
 import type { Category } from "@/types/types"
 
 type Props = {
-  title: string,
-  publish: string,
-  content: string,
+  title: string
+  publish: string
+  content: string
   eyecatch: {
-    url: string,
-    width: number,
-    height: number,
+    url: string
+    width: number
+    height: number
     blurDataURL: string
   }
-  categories: Category[],
-  description: string,
+  categories: Category[]
+  description: string
   prevPost: {
-    title: string,
+    title: string
     slug: string
   },
   nextPost: {
-    title: string,
+    title: string
     slug: string
   }
 }
