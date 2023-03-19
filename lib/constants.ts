@@ -1,6 +1,6 @@
 export const siteMeta = {
-  siteTitle: "SamplePage2",
-  siteDesc: "サンプルで作ったページです。",
+  siteTitle: "Diary",
+  siteDesc: "放送大学での勉強に関するブログです。",
   siteLang: "ja",
   siteUrl: "https://xxxxxxxxxx.url",
   siteLocale: "ja_JP",

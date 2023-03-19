@@ -7,10 +7,10 @@ const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon } = siteMet
 import siteImg from "images/ogp.jpg"
 
 type Props = {
-  pageTitle?: string,
-  pageDesc?: string,
+  pageTitle?: string
+  pageDesc?: string
   pageImg?: string
-  pageImgW?: number,
+  pageImgW?: number
   pageImgH?: number
 }
 
