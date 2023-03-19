@@ -19,11 +19,14 @@
 
 /* image */
 .image {
+  position: relative;
   width: 100%;
+  height: 250px;
 }
 
 @media (768px < width) {
   .image {
     width: 50%;
+    height: 400px;
   }
 }
