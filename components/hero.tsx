@@ -1,6 +1,6 @@
 import styles from "styles/hero.module.css"
 import Image from "next/image"
-import cube from "images/cube.jpg"
+import top from "images/top.png"
 
 type Props = {
   title: string
@@ -20,7 +20,7 @@ export default function Hero({ title, subtitle, imageOn = false }: Props) {
         {imageOn && (
           <figure className={styles.image}>
             <Image
-              src={cube}
+              src={top}
               alt=""
               layout="responsive"
               sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
