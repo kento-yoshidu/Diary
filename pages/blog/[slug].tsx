@@ -66,15 +66,15 @@ export default function Schedule({
           publish={publish}
         />
 
-        <figure>
+        <figure style={{ position: "relative", width: "60vw", height: "400px" }}>
           <Image
             key={eyecatch.url}
             src={eyecatch.url}
             alt=""
-            layout="responsive"
-            width={eyecatch.width}
-            height={eyecatch.height}
-            sizes="(min-width: 1152px) 1152px, 100vw"
+            fill
+            style={{
+              objectFit: "cover"
+            }}
             priority
             placeholder="blur"
             blurDataURL={eyecatch.blurDataURL}

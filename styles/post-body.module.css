@@ -2,8 +2,13 @@
   margin-top: var(--stack-space, 1.5em);
 }
 
+.stack h1 {
+  font-size: clamp(1.8rem, 1.5vw, 2.2rem);
+}
+
 .stack h2 {
-  font-size: 2rem;
+  font-size: clamp(1.65rem, 1.45vw, 2rem);
+  border-bottom: 2px solid #444;
 }
 
 .stack h3 {
@@ -22,6 +27,11 @@
 
 .stack p {
   line-height: 1.8;
+}
+
+.stack a {
+  color: blue;
+  text-decoration: underline;
 }
 
 .stack ul {
