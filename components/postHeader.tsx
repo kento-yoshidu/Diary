@@ -6,7 +6,7 @@ import { faClock } from "@fortawesome/free-regular-svg-icons"
 type Props = {
   title: string,
   subtitle: string,
-  publish: string
+  publish?: string
 }
 
 export default function PostHeader({ title, subtitle, publish = ""}: Props) {
