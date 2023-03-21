@@ -18,3 +18,9 @@ export type Category = {
   name: string,
   slug: string,
 }
+
+export type AllCategories = {
+  name: string,
+  id: string,
+  slug: string
+}

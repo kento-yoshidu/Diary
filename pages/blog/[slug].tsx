@@ -15,7 +15,7 @@ import PostCategories from "@/components/post-categories"
 import Meta from "@/components/meta"
 import Pagination from "@/components/pagination"
 
-import type { Category } from "@/types/types"
+import type { AllCategories, Category } from "@/types/types"
 
 type Props = {
   title: string
@@ -105,10 +105,10 @@ export default function Schedule({
 }
 
 export async function getStaticPaths() {
-  const allSlugs = await getAllSlug()
+  const allSlugs: AllCategories[] = await getAllSlug()
 
   return {
-    paths: allSlugs.map(({ slug }: { slug: string }) => `/blog/${slug}/`),
+    paths: allSlugs.map(({ slug }) => `/blog/${slug}/`),
     fallback: false
   }
 }
