@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "プログラミングRust",
+    "author": "Jim Blandy",
+    "genre": "技術書",
+    "published_year": 2022,
+    "description": "Rustプログラミング言語の包括的なガイド。"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "技術書",
+    "published_year": 2008,
+    "description": "読みやすく保守しやすいコードを書くための名著。"
+  }
+]
