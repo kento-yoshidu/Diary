@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(rustup show:*)",
+      "Bash(cargo install:*)",
+      "Bash(rustup target:*)",
+      "Bash(cargo leptos:*)",
+      "Bash(cargo check:*)",
+      "Bash(trunk --version)",
+      "Bash(ls C:/Users/toriw/.cargo/bin/trunk*)"
+    ]
+  }
+}
